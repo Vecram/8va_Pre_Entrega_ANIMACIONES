@@ -1,0 +1,36 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+//* - *//
+
+/* Navegación */
+.nav-link {
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: $color-acento;
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible { @include anillo-foco; }
+
+  &:active { transform: translateY(-2px) scale(0.97); }
+}
+
+/* Campos formulario decontacto */
+.formulario_contacto_input,
+.formulario_contacto_textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover { border-color: $color-acento; }
+
+  &:focus {
+    border-color: $color-acento;
+    box-shadow: 0 0 0 3px rgba($color-acento, 0.25);
+    outline: none;
+  }
+
+  &:active { border-color: $color-acento-oscuro; }
+}

@@ -1,0 +1,48 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+//* - *//
+
+//* Logo
+.logo_y_lista {
+  @include margenes-lados($arriba: 2rem, $derecha: 1.6rem, $abajo: 0.8rem, $izquierda: 1.6rem);
+
+  a img {
+    width: 7rem;
+  }
+}
+
+/* Navegacion excluyendo navbar */
+nav:not(.navbar) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+ul {
+    @include margenes-lados(
+      $arriba: 0rem,
+      $derecha: 1.6rem,
+      $abajo: 0rem,
+      $izquierda: 1.6rem);
+
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.6rem;
+
+    a {
+    font-size: 1.35rem;
+    padding: 0.4rem 0rem;
+    }
+}
+
+.nav_item a {
+    color: $color-nav;
+}

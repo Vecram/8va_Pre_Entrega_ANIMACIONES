@@ -1,0 +1,231 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+//* - *//
+
+@media (min-width: 768px) {
+    /* Margenes globales ajustados a tablet */
+    .margenes_globales {
+        margin: 3rem 4rem;
+    }
+
+    /* Navegacion excluyendo navbar */
+    nav:not(.navbar) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /* Logo y navbar */
+    .logo_y_lista {
+        margin: 2.5rem;
+    }
+
+    /* Lista de enlaces */
+    ul {
+        justify-content: flex-end;
+        margin: 1.2rem 2.5rem 1.2rem 1.2rem;
+        gap: 1rem 2.4rem;
+    }
+
+     /* Hero Container */
+    .contenedor_hero {
+        padding: 4rem;
+        
+        span {
+            font-size: 1.3rem;    
+        }
+
+        h1 {
+            font-size: 3.4rem;
+            margin-bottom: 1.6rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+        }
+  
+        button {
+            font-size: 1.5rem;
+            padding: 1.2rem 2rem;
+        }
+    }
+    /* Container Hero FAQ */
+    .contenedor_hero_faq {
+        padding: 4rem;
+
+        h1 {
+            font-size: 3.4rem;
+            margin-bottom: 1.6rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+        }
+    }
+
+     /* Info */
+    .info {
+        h2 {
+            font-size: 2.6rem;
+        }
+        
+        p {
+            font-size: 1.6rem;
+        }
+    }
+
+    /* Grid Principal */
+    .contenedor_grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 2rem;
+
+        grid-template-areas:
+            "itemgrid1 itemgrid1"
+            "itemgrid2 itemgrid3"
+            "itemgrid4 itemgrid5";
+
+        & > div {
+            padding: 1.8rem;
+        }
+
+        article {
+            display: block;
+            gap: 0;
+        }
+    }
+
+    /* Cards */
+    .cards {
+        padding: 1.5rem;
+        gap: 0;
+
+        figure .cards_image img {
+            height: 18rem;
+            aspect-ratio: auto;
+            margin-bottom: 1.2rem;
+        }
+
+        h3 .cards_title {
+        font-size: 1.6rem;
+    }
+    }
+
+    /* Grid de Articulos */
+    .diseño_areas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        h2 {
+            font-size: 2.6rem;
+        }
+
+        article {
+            padding: 1.8rem;
+
+            h3 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    /* Titulo de proyecto */
+    .titulo_proyecto h2 {
+        font-size: 2.6rem;
+    }
+
+    /* Grids 2, 3, 4 Y 5: Estilos compartidos */
+    .contenedor_grid2,
+    .contenedor_grid3,
+    .contenedor_grid4,
+    .contenedor_grid5 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        gap: 2rem;
+
+        & > div {
+            padding: 1.8rem;
+        }
+    }
+
+    /* Grid 2 */
+    .contenedor_grid2 {
+        grid-template-areas:
+            "itemgrid6 itemgrid6"
+            "itemgrid7 itemgrid8"
+            "itemgrid9 itemgrid9"
+            "itemgrid10 itemgrid11";
+
+        .cards_image img {
+            height: 18rem;
+            aspect-ratio: auto;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    /* Grid 3 */
+    .contenedor_grid3 {
+        grid-template-areas:
+            "itemgrid12 itemgrid13";
+
+        .cards_image img {
+            height: 18rem;
+            aspect-ratio: auto;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    /* Grid 4 */
+    .contenedor_grid4 {
+        grid-template-areas:
+            "itemgrid14 itemgrid14"
+            "itemgrid15 itemgrid16";
+
+        .cards_image img {
+            height: 18rem;
+            aspect-ratio: auto;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    /* Grid 5 */
+    .contenedor_grid5 {
+        grid-template-areas:
+            "itemgrid17 itemgrid17"
+            "itemgrid18 itemgrid19";
+
+        .cards_image img {
+            height: 18rem;
+            aspect-ratio: auto;
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    /* Grid 6 */
+    .margenes_globales_form {
+        margin: 3rem 4rem;
+        padding: 3rem;
+    }
+
+    /* Formulario de contacto */
+    .formulario_contacto {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        .formulario_contacto_campo:has(.formulario_contacto_textarea) {
+            grid-column: 1 / -1;
+        }
+
+        .formulario_contacto_boton {
+            grid-column: 1 / -1;
+            justify-self: start;
+            width: auto;
+        }
+    }
+}

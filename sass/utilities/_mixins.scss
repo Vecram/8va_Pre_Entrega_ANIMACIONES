@@ -1,0 +1,52 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+
+//* - *//
+
+//* Margenes globales
+@mixin margenes-lados(
+    $arriba: null,
+    $derecha: null,
+    $abajo: null,
+    $izquierda: null) {
+    @if $arriba != null {
+        margin-top: $arriba;
+    }
+
+    @if $derecha != null {
+        margin-right: $derecha;
+    }
+
+    @if $abajo != null {
+        margin-bottom: $abajo;
+    }
+
+    @if $izquierda != null {
+        margin-left: $izquierda;
+    }
+}
+
+//* Botones
+@mixin boton {
+    margin: 1.5rem 0rem 0rem auto;
+    padding: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border-radius: 0.7rem;
+    display: block;
+}
+
+@mixin boton_contacto {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+//* Contorno animado elementos
+@mixin anillo-foco($separacion: 2px, $radio: 4px) {
+  outline: $contorno-foco;
+  outline-offset: $separacion;
+  @if $radio { border-radius: $radio; }
+}

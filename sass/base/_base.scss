@@ -1,0 +1,25 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+//* - *//
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'inter', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}

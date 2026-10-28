@@ -1,0 +1,18 @@
+//* Colores y degradados
+$degradado-principal: linear-gradient(135deg, #4B0029, #BF0C14, #BC448E, #EF4F29, #EAD3EA);
+
+//* Color fuente
+$color-tipo: #242424;
+
+//* Nav y Footer
+$color-navbar-y-footer: #f8f8f8;
+$color-nav: #530074;
+
+//* Color Cards
+$color-cards-p: #ffeee4;
+$color-cards-s: #99629b;
+
+//* Interacciones (hover, foco, active)
+$color-acento: #7c6cf0;
+$color-acento-oscuro: #5a4bd6;
+$contorno-foco: 2px solid $color-acento;

@@ -1,0 +1,48 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+//* - *//
+
+.margenes_globales_form {
+    background-color: hsl(332, 100%, 95%);
+    margin: 2rem 1.6rem;
+    padding: 2rem 1.6rem;
+
+    border-radius: 0.7rem;
+}
+
+.formulario_contacto {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+
+    .formulario_contacto_campo {
+        min-width: 0;
+    }
+
+    .formulario_contacto_label {
+        display: block;
+        margin-bottom: 0.8rem;
+        font-size: 1.5rem;
+    }
+
+    .formulario_contacto_input,
+    .formulario_contacto_textarea {
+        width: 100%;
+        padding: 1rem 1.2rem;
+        font-family: inherit;
+        font-size: 1.6rem;
+        box-sizing: border-box;
+    }
+
+    .formulario_contacto_textarea {
+        resize: vertical;
+    }
+
+    .formulario_contacto_boton {
+        @include boton_contacto;
+    }
+}

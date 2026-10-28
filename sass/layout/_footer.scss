@@ -1,0 +1,33 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+//* - *//
+
+footer {
+    margin-top: 15vh;
+    padding-bottom: 2rem;
+
+    .redes {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 1.6rem 2rem;
+
+        a {
+            font-size: 1.1rem;
+            color: rgb(83, 0, 116);
+
+            img {
+                display: block;
+                width: 2.4rem;
+                height: auto;
+            }
+        }
+    }
+
+    .copyright {
+        font-size: 1.2rem;
+    }
+}

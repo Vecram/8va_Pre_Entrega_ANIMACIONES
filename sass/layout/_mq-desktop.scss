@@ -1,0 +1,155 @@
+//* Conexiones *//
+
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+//* - *//
+
+@media (min-width: 1024px) {
+    /* Margenes Globales - Desktop - */
+    .margenes_globales {
+        width: min(120rem, 100% - 12rem);
+        margin: 4rem auto;
+    }
+
+    /* 10. HERO → components/_hero.scss */
+    .contenedor_hero {
+        padding: 6rem;
+
+        h1 {
+            font-size: 4.4rem;
+
+            br {
+                display: inline;
+            }
+        }      
+
+        p {
+            font-size: 1.9rem;
+            max-width: 70rem;
+        }
+    }
+  
+    /* Contenedor Hero - FAQ */
+    .contenedor_hero_faq {
+        padding: 6rem;
+
+        h1 {
+            font-size: 4.4rem;
+        }
+
+        p {
+            font-size: 1.9rem;
+            max-width: 80rem;
+        }
+    }
+
+    /* Información */
+    .info {
+        h2 {
+            font-size: 3rem;
+        }
+
+        p {
+            max-width: 70rem;
+        }
+    }
+
+    /* Grid Principal */
+    .contenedor_grid {
+        grid-template-columns: repeat(4, 1fr);
+
+        grid-template-areas:
+            "itemgrid1 itemgrid1 itemgrid2 itemgrid2"
+            "itemgrid1 itemgrid1 itemgrid3 itemgrid3"
+            "itemgrid4 itemgrid5 itemgrid5 itemgrid5";
+
+        .itemgrid1 {
+            article {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+
+            .cards_image {
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 auto;
+
+                img {
+                    flex: 1 1 0;
+                    height: auto;
+                    min-height: 18rem;
+                }
+            }
+        }
+    }
+
+    /* Grid Articulos */
+    .diseño_areas {
+        grid-template-columns: repeat(3, 1fr);
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        article {
+            padding: 2rem;
+
+            h3 {
+                font-size: 1.9rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    /* Proyecto */
+    .titulo_proyecto h2 {
+        font-size: 3rem;
+    }
+
+    /* Grid 2 */
+    .contenedor_grid2 {
+        grid-template-columns: repeat(6, 1fr);
+
+        grid-template-areas:
+            "itemgrid6 itemgrid6 itemgrid7 itemgrid8 itemgrid8 itemgrid8"
+            "itemgrid6 itemgrid6 itemgrid7 itemgrid8 itemgrid8 itemgrid8"
+            "itemgrid6 itemgrid6 itemgrid9 itemgrid9 itemgrid9 itemgrid9"
+            "itemgrid10 itemgrid10 itemgrid10 itemgrid11 itemgrid11 itemgrid11";
+    }
+
+    /* Grid 3 */
+    .contenedor_grid3 {
+        grid-template-columns: repeat(5, 1fr);
+
+        grid-template-areas:
+            ". itemgrid12 itemgrid12 itemgrid13 .";
+    }
+
+    /* Grid 4 */
+    .contenedor_grid4 {
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-areas:
+            "itemgrid14 itemgrid15 itemgrid16";
+    }
+
+    /* Grid 5 */
+    .contenedor_grid5 {
+        grid-template-columns: repeat(3, 1fr);
+
+        grid-template-areas:
+            "itemgrid17 itemgrid18 itemgrid19";
+    }
+
+    /* Margenes Globales Formulario */
+    .margenes_globales_form {
+        width: min(120rem, 100% - 12rem);
+        margin: 4rem auto;
+        padding: 4rem;
+    }
+}
